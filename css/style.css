@@ -16,6 +16,22 @@
 body {
   background-color: var(--primary-background-color);
   font-family: roboto, sans-serif;
+  box-sizing: border-box;
+}
+/* утилита */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
 }
 /* Маркировка списков */
 .nav,
@@ -28,11 +44,28 @@ body {
 .examples-list {
   list-style-type: none;
 }
+/*  General */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.conteiner {
+  box-sizing: border-box;
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* Header */
 .header {
   background-color: var(--primary-background-color);
+  border-bottom: 1px solid #ececec;
 }
 
+.header .conteiner {
+  display: flex;
+  align-items: center;
+}
 .logo-color {
   color: var(--accent-color);
 }
@@ -43,6 +76,9 @@ body {
   text-decoration-color: none;
 }
 .header .logo-link {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
   color: var(--secondary-logo-color);
   font-family: Raleway, roboto;
   font-weight: 700;
@@ -50,14 +86,31 @@ body {
   line-height: 1, 19;
   letter-spacing: 0.03em;
 }
+.nav {
+  display: flex;
+  column-gap: 50px;
+}
+.contact {
+  display: flex;
+  margin-left: auto;
+  column-gap: 50px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .header .nav-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--main-title-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 .header .contact-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--main-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -77,7 +130,16 @@ body {
 .hero {
   background-color: #2f303a;
 }
-.hero-link {
+.hero .conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-text {
+  max-width: 696px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--main-light-color);
   font-weight: 900;
   font-size: 44px;
@@ -86,6 +148,15 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
+.hero.section {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.features-list {
+  display: flex;
+  column-gap: 30px;
+}
 .features,
 .field-action {
   background-color: var(--primary-background-color);
@@ -93,7 +164,11 @@ body {
 .title {
   color: var(--main-title-color);
 }
+.features-item {
+  width: 270px;
+}
 .features .sub-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -106,25 +181,56 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+.field-action-list {
+  display: flex;
+  column-gap: 30px;
+}
+.field-action .title {
+  margin-bottom: 50px;
+}
+.field-action-item {
+  width: calc((100%-60px) / 3);
+}
+.field-action.section {
+  padding-top: 0;
+}
 .title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
 }
+.team-card {
+  flex-basis: calc((100%-90px) / 4);
+  background-color: var(--main-light-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+}
 .team {
   background-color: var(--secondary-backgroung-color);
 }
 .team .sub-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
+}
+.team-list {
+  display: flex;
+  column-gap: 30px;
 }
 
 .team-text {
+  text-align: center;
+  padding-bottom: 30px;
+  padding-left: auto;
+  padding-right: auto;
   color: var(--main-text-color);
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -134,6 +240,10 @@ body {
   color: var(--main-light-color);
   background-color: var(--footer-background-color);
 }
+.footer.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .footer .footer-logo,
 .footer .footer-contact {
   text-decoration: none;
@@ -141,6 +251,8 @@ body {
 }
 
 .footer .footer-logo {
+  display: block;
+  margin-bottom: 20px;
   color: var(--main-light-color);
   font-family: 'Raleway';
   font-weight: 700;
@@ -149,6 +261,8 @@ body {
   letter-spacing: 0.03em;
 }
 .footer-text {
+  display: block;
+  margin-bottom: 9px;
   color: var(--main-light-color);
   font-size: 14px;
   line-height: 1.71;
@@ -160,20 +274,49 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+.footer-contact-item {
+  display: block;
+  margin-bottom: 9px;
+}
+.footer-contact-item:last-child {
+  margin-bottom: 0;
+}
+
 .footer-contact:hover,
 .footer-contact:focus {
   color: var(--accent-color);
 }
+/* Портфолио btn */
+.btn-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
 .examples {
   background-color: var(--primary-background-color);
 }
+.examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.example-cards {
+  flex-basis: calc((100%-60px) / 3);
+}
 .examples-text {
+  display: block;
+  width: 322px;
+  margin: 20px 24px 4px 24px;
   color: var(--main-text-color);
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.03em;
 }
 .btn-primary-type {
+  min-width: 216px;
+  padding: 10px 32px;
   background-color: var(--accent-color);
   color: var(--main-light-color);
   font-family: 'Roboto';
@@ -186,6 +329,7 @@ body {
   cursor: pointer;
 }
 .btn-secondary-type {
+  padding: 6px 22px;
   background-color: var(--secondary-backgroung-color);
   color: var(--main-title-color);
   font-family: 'Roboto';
@@ -195,6 +339,8 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   cursor: pointer;
+  border: 1px solid var(--secondary-backgroung-color);
+  border-radius: 4px;
 }
 .btn-secondary-type:hover,
 .btn-secondary-type:focus {
@@ -222,9 +368,23 @@ body {
 .address {
   font-style: normal;
 }
-.prtfl-sub-title {
+.prtfi-sub-title {
+  display: block;
+  width: 322px;
+  margin: 20px 24px 4px 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+}
+.example-image {
+  display: block;
+}
+.card-bottom {
+  box-sizing: border-box;
+  background: #ffffff;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  width: 370px;
 }
