@@ -102,6 +102,10 @@ a {
   padding-bottom: 32px;
 }
 
+.nav-item,
+.contact-item{
+  display: block;
+}
 .header .nav-link {
   padding-top: 32px;
   padding-bottom: 32px;
