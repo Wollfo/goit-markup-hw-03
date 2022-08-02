@@ -37,6 +37,11 @@ ul {
 a {
   text-decoration: none;
 }
+img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
 /* Маркировка списков */
 .nav,
 .contact,
@@ -80,7 +85,7 @@ a {
   text-decoration-color: none;
 }
 .header .logo-link {
-  margin-right: 93px;
+  
   padding-top: 24px;
   padding-bottom: 25px;
   color: var(--secondary-logo-color);
@@ -93,6 +98,7 @@ a {
 .nav {
   display: flex;
   column-gap: 50px;
+  margin-left: 93px;
 }
 .contact {
   display: flex;
@@ -104,8 +110,7 @@ a {
 .nav-item,
 .contact-item{
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
 }
 .header .nav-link {
   display: block;
@@ -114,6 +119,8 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header .contact-link {
@@ -225,8 +232,9 @@ padding-bottom: 30px;
   background-color: var(--secondary-backgroung-color);
 }
 .team .sub-title {
+  margin-bottom: 10px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform:none;
@@ -242,10 +250,9 @@ padding-bottom: 30px;
   height: auto;
 }
 .team-text {
+  font-size: 16px;
   text-align: center;
   padding-bottom: 30px;
-  padding-left: auto;
-  padding-right: auto;
   color: var(--main-text-color);
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -319,11 +326,9 @@ padding-bottom: 30px;
 }
 .example-cards {
   flex-basis: calc((100% - 60px) / 3);
+  background-color: var(--main-light-color);
 }
 .examples-text {
-  display: block;
-   width: calc(100% - 2 * 24px);
-  padding: 20px 24px 4px 24px;
   color: var(--main-text-color);
   font-size: 16px;
   line-height: 1.875;
@@ -342,6 +347,7 @@ padding-bottom: 30px;
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+  border: none;
 }
 .btn-secondary-type {
   padding: 6px 22px;
@@ -384,9 +390,7 @@ padding-bottom: 30px;
   font-style: normal;
 }
 .prtfi-sub-title {
-  display: block;
-  width: calc(100% - 2 * 24px);
-  padding: 20px 24px 4px 24px;
+  color: var(--main-title-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -396,8 +400,7 @@ padding-bottom: 30px;
   display: block;
 }
 .card-bottom {
-  box-sizing: border-box;
-  background: #ffffff;
+  padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
