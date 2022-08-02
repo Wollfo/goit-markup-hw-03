@@ -98,17 +98,17 @@ a {
   display: flex;
   margin-left: auto;
   column-gap: 50px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  
 }
 
 .nav-item,
 .contact-item{
   display: block;
-}
-.header .nav-link {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+.header .nav-link {
+  display: block;
   color: var(--main-title-color);
   font-weight: 500;
   font-size: 14px;
